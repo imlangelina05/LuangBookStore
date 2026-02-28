@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Book Store</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1><span class="brand">Luang</span> Book Store</h1>
+      <div class="cart" onclick="checkoutWhatsApp()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="cart-icon"
+        >
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path
+            d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+          ></path>
+        </svg>
+        <span class="cart-badge" id="cart-count">0</span>
+      </div>
+    </header>
+
+    <!-- HOME / HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Welcome to Luang Book Store</h2>
+        <p>
+          Discover thousands of high-quality books from around the world. From
+          novels to technology, business, history, and more — your reading
+          journey starts here.
+        </p>
+      </div>
+    </section>
+
+    <!-- FILTER -->
+    <section class="filter">
+      <button onclick="filterBooks('all')">All</button>
+      <button onclick="filterBooks('novel')">Novel</button>
+      <button onclick="filterBooks('technology')">Technology</button>
+      <button onclick="filterBooks('religion')">Religion</button>
+      <button onclick="filterBooks('business')">Business</button>
+      <button onclick="filterBooks('culture')">Culture</button>
+      <button onclick="filterBooks('history')">History</button>
+      <button onclick="filterBooks('social')">Social</button>
+      <button onclick="filterBooks('health')">Health</button>
+      <button onclick="filterBooks('politics')">Politics</button>
+      <button onclick="filterBooks('art')">Art</button>
+    </section>
+
+    <!-- BOOK LIST -->
+    <section class="book-container" id="book-container"></section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Luang Book Store. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
